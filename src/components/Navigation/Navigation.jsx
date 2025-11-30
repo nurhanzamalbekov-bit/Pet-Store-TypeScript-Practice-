@@ -1,15 +1,14 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "../../pages/Home/Home";
-import Categories from "../../pages/Categories";
-import CategoriesDetails from "../../pages/Category-details";
+import { Link } from "react-router-dom";
+import s from "./navigation.module.css"
 
 const Navigation = () => {
   return (
-    <Routes>
-      <Route path="/Home" element={<Home />} />
-      <Route path="/Categories" element={<Categories />} />
-      <Route path="/CategoriesDetails" element={<CategoriesDetails />} />
-    </Routes>
+    <nav className={s.container}>
+        <Link to="/Home">Home</Link>
+        <Link to="/Categories">Categorie's</Link>
+        <Link to="/CategoriesDetails">/Categorie's details</Link>
+    </nav>
+   
   );
 };
 
