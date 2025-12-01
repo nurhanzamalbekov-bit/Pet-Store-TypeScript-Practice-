@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Navigation from "../Navigation/Navigation";
 import Home from "../../pages/Home/Home";
-import Categories from "../../pages/Categories";
-import CategoriesDetails from "../../pages/Category-details";
-
+import Categories from "../../pages/Categories/Categories";
+import CategoriesDetails from "../../pages/Category-details/CategoryDetails";
 
 const Header = () => {
   return (
@@ -15,11 +15,11 @@ const Header = () => {
       >
         <h2>it's my github</h2>
       </a>
-
+      <Navigation />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Categories" element={<Categories />} />
-        <Route path="/CategoriesDetails" element={<CategoriesDetails />} />
+        <Route path="/CategoriesDetails" element={<CategoriesDetails/>} />
       </Routes>
     </header>
   );
